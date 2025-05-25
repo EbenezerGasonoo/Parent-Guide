@@ -1,0 +1,125 @@
+.parent-login-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #663399 0%, #8a2be2 100%); /* Purple gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent-login-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.parent-login-card h1 {
+  color: #663399; /* Darker purple for heading */
+  margin: 0 0 2rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.error-message {
+  background: #fee2e2;
+  border: 1px solid #ef4444;
+  color: #991b1b;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.parent-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50; /* Dark grey */
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #8a2be2; /* Purple */
+  box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.1);
+}
+
+.login-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #663399; /* Purple */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.login-button:hover:not(:disabled) {
+  background-color: #5a2a85; /* Darker purple */
+  transform: translateY(-2px);
+}
+
+.login-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.forgot-password-link {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.forgot-password-link a {
+  color: #663399; /* Purple */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-password-link a:hover {
+  text-decoration: underline;
+}
+
+/* Loading Spinner */
+.login-button .loading-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 0.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} 
